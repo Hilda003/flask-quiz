@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm p-4">
+  <h3 class="text-center text-warning mb-3">Papan Peringkat</h3>
+  <table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Nama</th>
+        <th>Skor</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ user.nickname }}</td>
+          <td>{{ user.score }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

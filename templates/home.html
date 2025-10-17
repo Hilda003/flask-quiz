@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center mt-4">
+    <h1 class="fw-bold text-primary mb-3">Selamat Datang di AI Quiz!</h1>
+    <p class="lead">Uji pengetahuanmu tentang AI, NLP, dan Computer Vision 🎯</p>
+
+    {% if current_user.is_authenticated %}
+    <a href="{{ url_for('quiz') }}" class="btn btn-success btn-lg mb-4">Mulai Kuis</a>
+    {% else %}
+    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg mb-4">Daftar Sekarang</a>
+    {% endif %}
+</div>
+<div class="card shadow-sm p-4 mt-4">
+    <h4 class="text-primary mb-3">🌤️ Cek Perkiraan Cuaca</h4>
+    <form method="POST" class="row g-3 mb-3">
+        <div class="col-md-9">
+            <input type="text" name="city" class="form-control" placeholder="Masukkan nama kota (misal: Jakarta)"
+                required>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary w-100">Cari</button>
+        </div>
+    </form>
+
+    {% if weather %}
+    <h5 class="mb-3 text-center">Perkiraan Cuaca di <b>{{ weather.city }}</b></h5>
+    <table class="table table-bordered text-center">
+        <thead class="table-light">
+            <tr>
+                <th>Tanggal</th>
+                <th>Suhu Siang (°C)</th>
+                <th>Suhu Malam (°C)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for f in weather.forecast %}
+            <tr>
+                <td>{{ f.date }}</td>
+                <td>{{ f.day_temp }}</td>
+                <td>{{ f.night_temp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+{% endblock %}
