@@ -23,6 +23,18 @@ A simple **Flask web application** that allows users to register, log in, take a
 
 ---
 
+## Preview
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/0cd0e700-4d34-42ce-a219-1ade4a0fc1ef" />
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/6051cd1e-4307-465f-b3aa-c00d36967f0c" />
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/f4340afa-9628-46d5-869b-7966d494af63" />
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/8e76963f-58be-48b1-b5e4-9d86641d6a2b" />
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/dba70b98-80f8-4acf-8638-fc95f3043f58" />
+
+
+
+
+
+
 ## ⚙️ Installation (Run Locally)
 
 ### 1️⃣ Clone the project
@@ -124,4 +136,5 @@ The app can be deployed easily on:
 ## 👨‍💻 Author
 
 **Hildatul** — Developer passionate about building interactive web apps.
+
 
